@@ -14,5 +14,5 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-All credit it given to the fine folks at Udacity who created this wonderful
+All credit is given to the fine folks at Udacity who created this wonderful
 nanodegree program.
