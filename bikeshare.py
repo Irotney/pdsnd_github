@@ -18,7 +18,8 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
 
-    #TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+
+    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     def getcity():
         """
         Prompts the user to enter a city from specified list that is defined as a dictionary
@@ -29,7 +30,7 @@ def get_filters():
 
         city_dict = {'1' : 'Chicago',
                      '2' : 'New York City',
-                     '3' : 'Washington'}
+                     '3' : 'Washington' }
         city_opt = ()
 
         while city_opt not in city_dict:
@@ -38,6 +39,7 @@ def get_filters():
         city = city_dict[city_opt]
 
         return city
+
     city = getcity()
 
 
@@ -50,17 +52,16 @@ def get_filters():
         """
         print('Please choose a month \n 0. All\n 1. January\n 2. February\n 3. March\n 4. April\n 5. May\n 6. June\n')
         month_dict = {'0' : 'All',
-                      '1' : 'January',
-                      '2' : 'February',
-                      '3' : 'March',
-                      '4' : 'April',
-                      '5' : 'May',
-                      '6' : 'June',
+                     '1' : 'January',
+                     '2' : 'February',
+                     '3' : 'March',
+                     '4' : 'April',
+                     '5' : 'May',
+                     '6' : 'June',
                      }
         month_opt = ()
         while month_opt not in month_dict:
-            print('Please input 1 - 6 or 0 for All months')
-            month_opt = input()
+            month_opt = input('Please input 1 - 6 or 0 for All months')
         month = month_dict[month_opt]
         return month
 
@@ -76,18 +77,17 @@ def get_filters():
         """
         print('Please select a day of the week\n 0. All\n 1. Monday\n 2. Tuesday\n 3. Wednesday\n 4. Thursday\n 5. Friday\n 6. Saturday\n 7. Sunday')
         day_dict = {'0' : 'All',
-                   '1' : 'Monday',
-                   '2' : 'Tuesday',
-                   '3' : 'Wednesday',
-                   '4' : 'Thrusday',
-                      '5' : 'Friday',
-                   '6' : 'Saturday',
-                   '7' : 'Sunday'
+                    '1' : 'Monday',
+                    '2' : 'Tuesday',
+                    '3' : 'Wednesday',
+                    '4' : 'Thrusday',
+                    '5' : 'Friday',
+                    '6' : 'Saturday',
+                    '7' : 'Sunday'
                   }
         day_opt = ()
         while day_opt not in day_dict:
-            print('Please input 1 - 7 for day of week or 0 for all days')
-            day_opt = input()
+            day_opt = input('Please input 1 - 7 for day of week or 0 for all days')
         day = day_dict[day_opt]
         return day
 
@@ -157,6 +157,7 @@ def time_stats(df):
     print('\nThe most common start hour is ...')
     print(df['Start Time'].dt.hour.mode()[0])
     print('-'*40)
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -254,6 +255,7 @@ def raw_data(df):
             rawdata = input('\nWould you like to see 5 more rows of data? Please enter Yes or No.\n').lower()
             if rawdata not in ('yes', 'y'):
                 break
+
 
 
 def main():
